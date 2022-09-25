@@ -1,0 +1,10 @@
+<div class="row justify-content-center">
+  <div class="card col-md-3 m-2 " *ngFor="let item of Order">
+    <div class="card-body">
+     <a [routerLink]="['/OrderDetails/',item.OrderId]">
+      <p class="card-text">Date: {{item.OrderDate  }}</p>
+      <p class="card-text p-2">Payment: {{item.PaymentType}}</p>
+     </a>
+    </div>
+  </div>
+</div>

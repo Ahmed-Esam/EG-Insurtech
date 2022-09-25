@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="card col-md-4 mb-2 border-0" *ngFor="let item of Product">
+    <img [src]="item.ProductImg" class="card-img-top img-fluid" [alt]="item.ProductName">
+    <div class="card-body">
+      <h5 class="card-title">{{item.ProductName}}</h5>
+      <p class="card-text">Price: {{item.ProductPrice}}</p>
+      <p class="card-text p-2" [ngClass]="{'text-bg-danger': item.AvailablePieces <= 10 ,'text-bg-secondary': item.AvailablePieces > 10}">Available Pieces:{{item.AvailablePieces}}</p>
+    </div>
+  </div>
+</div>
